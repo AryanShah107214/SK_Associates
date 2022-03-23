@@ -41,3 +41,10 @@ footer {
 #demo {
     margin-bottom:100px;
 }
+
+header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
