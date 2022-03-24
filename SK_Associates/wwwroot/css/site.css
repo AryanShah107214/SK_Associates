@@ -27,7 +27,7 @@ footer {
 
 .carousel-control-next,
 .carousel-control-prev /*, .carousel-indicators */ {
-    filter: invert(100%);
+/*    filter: invert(100%);*/
 }
 
 div p {
@@ -47,4 +47,24 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
+}
+
+#home {
+    background-image: url("../images/accountingSmallMedium.png");
+    background-repeat:no-repeat;
+    max-height: 100%;
+    max-width: 150%;
+    padding-top: 60px;
+}
+
+#reviews {
+    padding-top: 60px;
+}
+
+#services {
+    padding-top: 60px;
+}
+
+#contact {
+    padding-top: 60px;
 }
