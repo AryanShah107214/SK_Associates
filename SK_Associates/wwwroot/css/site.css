@@ -1,12 +1,41 @@
 html {
-    font-size: 14px;
+/*    font-size: 14px;*/
     position: relative;
-    min-height: 100%;
-    
+    /*min-height: 100%;*/
 }
 
-footer {
-    background-color: white;
+header {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+}
+
+.bg-container {
+    background-image: url("../images/accountingMediumSmall.png");
+    background-repeat: no-repeat;
+    height:100vh;
+    width:100vw;
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+/*    margin-left: -115px;*/
+    background-size: cover;
+    overflow: hidden;
+}
+
+.reviews .reviewDiv {
+    background-color: rgba(165,183,195,255);
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    /*    margin-left: -115px;*/
+    background-size: cover;
+    overflow: hidden;
 }
 
 .carousel-control-next,
@@ -16,54 +45,76 @@ footer {
 }
 
 .carousel-indicators {
-    position:absolute;
+    position:relative;
+    top:200px;
 }
 
-div p {
+.carousel-inner .carousel-item p {
     text-align:center;
 }
 
-footer {
-    text-align:center;
+#reviewCarousel {
+    margin-bottom: 100px;
 }
 
-#demo1 {
-    margin-bottom:100px;
+    .services .serviceDiv {
+        background-color: rgba(165,183,195,255);
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vw;
+        padding-top: 60px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        /*    margin-left: -115px;*/
+        background-size: cover;
+        overflow: hidden;
+    }
+
+.services .container {
+    position: relative;
+    width: 2200px;
+    height: 300px;
+    margin: 240px auto;
 }
 
-header {
+.services .container .box {
+    position: relative;
+    width: 370px;
+    height: 270px;
+    background: white;
+    float: left;
+    margin: 10px;
+    border: 1px solid black;
+    box-sizing: border-box;
     overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 100%;
 }
 
-.bg-container {
-    background-image: url("../images/accountingMediumSmall.png");
-    background-repeat: no-repeat;
-    height: 120%;
-    width: 120.55%;
-    padding-top: 60px;
-    padding-left: 0;
-    padding-right: 0;
-    margin:0;
-    margin-left:-115px;
-    background-position-x:left;
-    background-size: cover;
-    overflow:hidden;
+.services .container .box:hover .text-center h4 {
+    display: initial;
 }
 
-#reviews {
-    padding-top: 60px;
+.services .container .box .content p {
+    display: none;
 }
 
-#services {
-    padding-top: 60px;
+.services .container .box:hover .content p {
+    display: initial;
 }
 
-.contact {
-    padding-top: 60px;
-}
+    .contact .contactDiv {
+        background-color: rgba(165,183,195,255);
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vw;
+        padding-top: 60px;
+        padding-left: 0;
+        padding-right: 0;
+        margin: 0;
+        /*    margin-left: -115px;*/
+        background-size: cover;
+        overflow: hidden;
+    }
 
 
 .contact .container .box form .inputBox input {
@@ -71,10 +122,10 @@ header {
     font-size: 1.7rem;
     color: black;
     text-transform: none;
-}
+    }
 
 iframe {
-    margin-top:75px;
+    margin-top: 75px;
 }
 
 .contact .container .box form {
@@ -83,11 +134,11 @@ iframe {
     text-align: center;
 }
 
-    .contact .container .box form h2 {
-        text-transform: uppercase;
-        font-size: 3.5rem;
-        color: black;
-    }
+.contact .container .box form h2 {
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: black;
+}
 
 .contact .container .box form .inputBox {
     display: flex;
@@ -96,7 +147,7 @@ iframe {
     margin-bottom: 2rem;
 }
 
- span {
+span {
     font-size: 2rem;
     padding-left: 2rem;
 }
@@ -121,34 +172,7 @@ iframe {
     clear: both;
 }
 
-.services .container {
-    position:relative;
-    width: 2200px;
-    height: 300px;
-    margin: 240px auto;
-}
 
-    .services .container .box {
-        position: relative;
-        width: 370px;
-        height: 270px;
-        background: white;
-        float: left;
-        margin: 10px;
-        border: 1px solid black;
-        box-sizing: border-box;
-        overflow: hidden;
-    }
-
-.services .container .box:hover .text-center h4 {
-    display:initial;
-}
-.services .container .box .content p{
-    display:none
-}
-.services .container .box:hover .content p {
-    display:initial;
-}
 
 .contact .container .box {
     position: relative;
@@ -158,8 +182,26 @@ iframe {
     float: left;
     margin: 15px;
     border: 1px solid black;
-    /*    box-sizing: border-box;
-*/ overflow: hidden;
-    float: left;
-    width: 50%;
+    /*    box-sizing: border-box;*/ 
+    overflow:scroll;
+}
+
+
+footer {
+    background-color: white;
+    text-align: center;
+}
+
+@media screen and (max-width:768px) {
+    .bg-container {
+        height: 100%;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:1024px) {
+    .bg-container {
+        height: 100%;
+        width: 100%;
+    }
 }
