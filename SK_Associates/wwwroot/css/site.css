@@ -1,32 +1,34 @@
 html {
-/*    font-size: 14px;*/
     position: relative;
-    /*min-height: 100%;*/
 }
 
-header {
+header { /*makes header visible when scrolling and always above content*/
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100vw;
-    z-index:1;
+    z-index:3;
 }
 
-.bg-container {
+/*Home style begins*/
+.bg-container { /*background image in home section*/
     background-image: url("../images/accountingMediumSmall.png");
     background-repeat: no-repeat;
-    height:100vh;
-    width:100vw;
+    background-size: cover;
+    background-position:center center;
+    background-attachment:fixed;
+    height: 100vh;
+    width: 100vw;
     padding-top: 60px;
     padding-left: 0;
     padding-right: 0;
     margin: 0;
-/*    margin-left: -115px;*/
-    background-size: cover;
     overflow: hidden;
 }
+/*home style ends*/
 
-.reviews .reviewDiv {
+/*review style begins*/
+.reviews .reviewDiv {/*background color for review section*/
     background-color: rgba(165,183,195,255);
     min-height: 100vh;
     min-width: 100vw;
@@ -34,54 +36,53 @@ header {
     padding-left: 0;
     padding-right: 0;
     margin: 0;
-    /*    margin-left: -115px;*/
     background-size: cover;
     overflow: hidden;
 }
 
 .carousel-control-next,
 .carousel-control-prev,
-.carousel-indicators {
+.carousel-indicators { /*makes carousel controls and indicators visible*/
     filter: invert(100%);
 }
 
-.carousel-indicators {
+.carousel-indicators {/*fixes error of indicator overlapping carousel content*/
     position:relative;
     top:200px;
 }
 
-.carousel-inner .carousel-item p {
+.carousel-inner .carousel-item p {/*center aligns carousel paragraph */
     text-align:center;
 }
 
-#reviewCarousel {
-    margin-bottom: 100px;
+/*review style ends*/
+
+/*services style begins*/
+.services {
+    display: block;
 }
 
-    .services .serviceDiv {
-        background-color: rgba(165,183,195,255);
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        min-width: 100vw;
-        padding-top: 60px;
-        padding-left: 0;
-        padding-right: 0;
-        margin: 0;
-        /*    margin-left: -115px;*/
-        background-size: cover;
-        overflow: hidden;
-    }
-
-.services .container {
-    position: relative;
-    width: 2200px;
-    height: 300px;
-    margin: 240px auto;
+.services .serviceDiv { /*for background color*/
+    background-color: rgba(165,183,195,255);
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    min-width: 100vw;
+    padding-top: 60px;
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    background-size: cover;
+    overflow: hidden;
 }
 
-.services .container .box {
-    position: relative;
-    width: 370px;
+.services .serviceDiv .container {
+    position: center;
+    width:100vw;
+    height: 100vh;
+}
+
+.services .container .box {/*makes boxes and borders them*/
+    width: 400px;
     height: 270px;
     background: white;
     float: left;
@@ -89,25 +90,26 @@ header {
     border: 1px solid black;
     box-sizing: border-box;
     overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .services .container .box:hover .text-center h4 {
     display: initial;
 }
 
-.services .container .box .content p {
+.services .container .box .content p {/*hides paragraph*/
     display: none;
 }
 
-.services .container .box:hover .content p {
+.services .container .box:hover .content p {/*shows it once hovered*/
     display: initial;
 }
+/*services style ends*/
 
-    .contact .contactDiv {
+/*contact style begins*/
+    .contact .contactDiv {/*background color*/
         background-color: rgba(165,183,195,255);
-        background-repeat: no-repeat;
-        min-height: 100vh;
-        min-width: 100vw;
         padding-top: 60px;
         padding-left: 0;
         padding-right: 0;
@@ -118,27 +120,45 @@ header {
     }
 
 
-.contact .container .box form .inputBox input {
+.contact .container .box .inputBox input {/*form input box color and size*/
     width: 100%;
-    font-size: 1.7rem;
+    font-size: 14px;
     color: black;
     text-transform: none;
+}
+
+
+.contact .container { /*div that holds map and form*/
+    display: grid;
+    object-fit: cover;
+/*    flex-wrap:wrap;
+*/    gap: 10px;
+      height:100vh;
+    width:fit-content;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact .container iframe {/*map fits full div*/
+    flex: 1 1 45rem;
+    /*margin-top: 45px;*/
+    object-fit: cover;
+
+}
+
+    .contact .container .box form {/**/
+        /*    gap: 50px;*/
+        /*padding: 5rem 2rem;*/
+        object-fit: cover;
+        flex: 1 1 45rem;
+        /*    padding: 5rem 4rem;*/
+        text-align: center;
     }
-
-iframe {
-    margin-top: 75px;
-}
-
-.contact .container .box form {
-    gap: 50px;
-    padding: 5rem 4rem;
-    text-align: center;
-}
 
 .contact .container .box form h2 {
     text-transform: uppercase;
     font-size: 3.5rem;
-    color: black;
+/*    color: black;*/
+    color:white;
 }
 
 .contact .container .box form .inputBox {
@@ -148,9 +168,10 @@ iframe {
     margin-bottom: 2rem;
 }
 
-span {
+.contact .contactDiv div span {
     font-size: 2rem;
     padding-left: 2rem;
+    filter: invert(100%);
 }
 
 .btn {
@@ -173,36 +194,27 @@ span {
     clear: both;
 }
 
-
-
-.contact .container .box {
-    position: relative;
-    width: fit-content;
-    height: fit-content;
-    background: white;
-    float: left;
-    margin: 15px;
-    border: 1px solid black;
-    /*    box-sizing: border-box;*/ 
-    overflow:scroll;
-}
-
+    /*contact us style ends*/
 
 footer {
     background-color: white;
     text-align: center;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:86%) {
+    /*for phones*/
     .bg-container {
-        height: 100%;
-        width: 100%;
+        display:none;
+    }
+
+    .bg-container .text-center {
+        display:initial;
     }
 }
 
-@media screen and (max-width:1024px) {
+/*@media screen and (max-width:1024px) {
     .bg-container {
         height: 100%;
         width: 100%;
     }
-}
+}*/
