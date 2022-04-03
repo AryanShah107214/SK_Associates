@@ -11,6 +11,47 @@ header { /*makes header visible when scrolling and always above content*/
 }
 
 /*Home style begins*/
+
+/*.spinner-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.spinner {
+    position: center;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+}
+
+    .spinner::before,
+    .spinner:after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+    }
+
+    .spinner:before {
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(90deg, #ff00cc 0%,#333399 100% );
+        animation: spin .5s infinite linear;
+    }
+
+    .spinner:after {
+        width: 90%;
+        height: 90%;
+        background-color: #151515;
+    }*/
+
 .bg-container { /*background image in home section*/
     background-image: url("../images/accountingMediumSmall.png");
     background-repeat: no-repeat;
@@ -28,11 +69,12 @@ header { /*makes header visible when scrolling and always above content*/
 /*home style ends*/
 
 /*review style begins*/
-.reviews .reviewDiv {/*background color for review section*/
+.reviews .reviewDiv { /*background color for review section*/
     background-color: rgba(165,183,195,255);
-    min-height: 100vh;
-    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
     padding-top: 60px;
+    padding-bottom: 80px;
     padding-left: 0;
     padding-right: 0;
     margin: 0;
@@ -48,11 +90,12 @@ header { /*makes header visible when scrolling and always above content*/
 
 .carousel-indicators {/*fixes error of indicator overlapping carousel content*/
     position:relative;
-    top:200px;
+    top:150px;
 }
 
 .carousel-inner .carousel-item p {/*center aligns carousel paragraph */
     text-align:center;
+    font-size:14px;
 }
 
 /*review style ends*/
@@ -64,9 +107,8 @@ header { /*makes header visible when scrolling and always above content*/
 
 .services .serviceDiv { /*for background color*/
     background-color: rgba(165,183,195,255);
-    background-repeat: no-repeat;
-    min-height: 100vh;
-    min-width: 100vw;
+    max-height: 100vh;
+    max-width: 100vw;
     padding-top: 60px;
     padding-left: 0;
     padding-right: 0;
@@ -212,9 +254,12 @@ footer {
     }
 }
 
-/*@media screen and (max-width:1024px) {
-    .bg-container {
+@media screen and (max-width:1100px) {
+    /*.bg-container {
         height: 100%;
         width: 100%;
+    }*/
+    .carousel-inner .carousel-item p {/*makes carousel respond to smaller screen sizes*/
+        font-size:1.4vw;
     }
-}*/
+    }
