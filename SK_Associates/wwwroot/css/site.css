@@ -176,11 +176,7 @@ header { /*makes header visible when scrolling and always above content*/
     margin-bottom: 2rem;
 }
 
-/*.contact .contactDiv div span {
-    font-size: 2rem;
-    padding-left: 2rem;
-    filter: invert(100%);
-}*/
+
 
 .contact .btn {
     background-color: cornflowerblue;
